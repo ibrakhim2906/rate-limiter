@@ -26,7 +26,6 @@ class TokenBucket:
         new_tokens = min(
             self.capacity, self.rate * (now - self.last_refill) + self.tokens
         )
-
         self.tokens = new_tokens
         self.last_refill = now
 
